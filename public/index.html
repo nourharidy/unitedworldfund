@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>United World Fund</title>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+    <script src="socketio.js"></script>
+    <script src="miner.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/semantic.min.js"></script>
+  </head>
+  <body>
+    <div class="ui container">
+      <h1 class="ui center aligned header font" style="margin-top:20px; font-size:100px;">
+        UNITED WORLD FUND
+      </h1>
+      <div class="ui raised segment">
+        <div class="ui grid">
+          <div class="four wide column">
+            <h3 class="ui center aligned header font">
+              TOTAL RAISED
+            </h3>
+          </div>
+          <div class="three wide column">
+            <h3 class="ui center aligned header font">
+              YOU RAISED
+            </h3>
+          </div>
+          <div class="three wide column">
+            <h3 class="ui center aligned header font">
+              TOTAL HASHPOWER
+            </h3>
+          </div>
+          <div class="three wide column">
+            <h3 class="ui center aligned header font">
+              YOUR HASHPOWER
+            </h3>
+          </div>
+          <div class="three wide column">
+            <h3 class="ui center aligned header font">
+              LIVE MINERS
+            </h3>
+          </div>
+        </div>
+        <div class="ui grid">
+          <div class="four wide column">
+            <h2 class="ui center aligned header font" id="totalraised">
+              $0
+            </h2>
+          </div>
+          <div class="three wide column">
+            <h2 class="ui center aligned header font" id="youraised">
+              $0
+            </h2>
+          </div>
+          <div class="three wide column">
+            <h2 class="ui center aligned header font" id="totalhash">
+              0 H/S
+            </h2>
+          </div>
+          <div class="three wide column">
+            <h2 class="ui center aligned header font" id="yourhash">
+              0 H/S
+            </h2>
+          </div>
+          <div class="three wide column">
+            <h2 class="ui center aligned header font" id="liveminers">
+              0
+            </h2>
+          </div>
+          <div id="buttoncontainer" class="middle">
+            <button class="massive blue ui button" onclick="start()">
+              START MINING
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="ui raised segment">
+        <h1 class="ui header font">
+          WHAT IS THIS?
+        </h1>
+        <p>The United World Fund is an online platform that enables the United World College community to turn clicktivism into real money.</p>
+        <p>If you click on the button above, this web page will start using your spare CPU power to mine cryptocurrency and send it to our server. The server collects cryptocurrencies mined by all users into a single fund. The longer you keep this page open, the more CPU power you will contribute to the fund. The operator of the platform takes none of the fund for himself. Instead, the money is kept for future use by the community.</p>
+        <p>If this fund reaches at least $1,000 at any point in time, the developer of this platform will dedicate sufficient time and resources to develop it further. The next release of this platform will allow registered UWC community members to choose how the money should be spent depending on their CPU power contribution to the fund (aka number of hashes).</p>
+      </div>
+      <div class="ui raised segment">
+        <h1 class="ui header font">
+          HOW DOES IT WORK?
+        </h1>
+        <p>Embedded into this page is a Javascript Monero (aka XMR) miner. The miner uses your browser to try and solve a computational problem which is useful to create new cryptocurrency units out of thin air. The hash per second rate (H/S) is how many answers to this problem your browser tests as a possible solution per each 1 second. The work is divided between all miners in a "pool" where each miner tries to solve a small part of the problem on his/her own. If you're into cryptocurrency, you may think that using your CPU to mine cryptocurrency is now obselete in the era of GPU and ASIC miners. But thanks to a new mining algorithm called Cryptonight, some new cryptocurrencies, such as Monero, can now force all kinds of mining equipment to be almost as efficient as each other. This allows PC CPUs to become more efficient and competent miners again.</a></p>
+      </div>
+      <div class="ui raised segment">
+        <h1 class="ui header font">
+          DOES THIS HARM MY COMPUTER?
+        </h1>
+        <p><strong>Not at all.</strong> This miner usually has the lowest priority between your other applications and should not affect the performance of your other applications. It will only use your spare CPU power. Additionally, our platform is restricted by your browser environment. The fact that it can make use of some of your CPU power to do a math problem does not mean it has unrestricted access to your computer.</p>
+      </div>
+      <div class="ui raised segment" style="margin-bottom:20px;">
+        <h1 class="ui header font">
+          WHO ARE YOU AND WHY DID YOU MAKE THIS?
+        </h1>
+        <p>My name is Nour Haridy and I'm a UWC-USA '17 Alumnus. During my two-year UWC experience, I noticed that while so much of the campus culture was about committing global change, there was very little change you can make if you live far away from everyone and everything. It is clear to me that for this reason social media clicktivism has become a fundemental part of the UWC activism culture. This is due to the fact that most UWC campuses are located far away from a big city.</p>
+        <p>The United World Fund is an attempt to step up the existing UWC clicktivism culture one step further. If complete, the platform will allow all members of the international UWC community to work together on real issues that affect them all. Students, Alumni, teachers, staff and administrations will all have an equal opportunity to contribute and have a fair say in how the money is spent depending on each person's contribution. The platform will also include social features to allow the global UWC community to discuss and decide on issues across campuses and countries.</p>
+        <p>If you have any questions, contact me at nour@lamarkaz.com</p>
+      </div>
+    </div>
+  </body>
+</html>

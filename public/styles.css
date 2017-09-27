@@ -1,0 +1,9 @@
+.font {
+  font-family: 'Raleway' !important;
+}
+.middle {
+  display: block !important;
+  margin: auto !important;
+  margin-bottom: 30px !important;
+  margin-top: 30px !important;
+}
