@@ -1,4 +1,4 @@
-var port = 8000;
+var port = 80;
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
