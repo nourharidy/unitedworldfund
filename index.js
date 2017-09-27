@@ -5,20 +5,20 @@ const server = require('http').Server(app);
 const io = require('socket.io')(app.listen(port));
 const request = require('request');
 var miners = [];
-var sitestats;
-var payoutstats;
-
+var sitestats = {};
+var payoutstats = {};
+const secret = process.argv[2];
 app.use(express.static('public'));
 
 setInterval(function(){
-  request('https://api.coin-hive.com/stats/site?secret='+process.argv[2], function (error, response, bodyone) {
+  request('https://api.coin-hive.com/stats/site?secret='+secret, function (error, response, bodyone) {
     sitestats = JSON.parse(bodyone);
-    request('https://api.coin-hive.com/stats/payout?secret='+process.argv[2], function (error, response, bodytwo) {
+    request('https://api.coin-hive.com/stats/payout?secret='+secret, function (error, response, bodytwo) {
       payoutstats = JSON.parse(bodytwo);
       io.sockets.emit('stats',{payout:payoutstats, site:sitestats});
     })
   })
-},60000)
+},30000)
 
 
 io.on('connection', function (socket) {

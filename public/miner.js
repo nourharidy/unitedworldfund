@@ -9,7 +9,9 @@ start = function(){
   $(window.buttoncontainer).html('<button class="massive red ui button" onclick="stop()">STOP MINING</button>');
   interval  = setInterval(function(){
     $(window.yourhash).html(Math.round(miner.getHashesPerSecond()) + " H/S");
-    $(window.youraised).html("$"+(window.usdperhash*miner.getTotalHashes()).toFixed(7));
+    if(window.usdperhash){
+      $(window.youraised).html("$"+(window.usdperhash*miner.getTotalHashes()).toFixed(7));      
+    }
   },500)
 }
 
