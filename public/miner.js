@@ -1,5 +1,5 @@
 var miner = new CoinHive.Anonymous('g92UwP2vZA075nn4uP5DsgP4JMy7nwfu');
-var socket = io.connect('http://localhost:8000');
+var socket = io.connect('http://localhost:80');
 
 var interval;
 
@@ -10,7 +10,7 @@ start = function(){
   interval  = setInterval(function(){
     $(window.yourhash).html(Math.round(miner.getHashesPerSecond()) + " H/S");
     if(window.usdperhash){
-      $(window.youraised).html("$"+(window.usdperhash*miner.getTotalHashes()).toFixed(7));      
+      $(window.youraised).html("$"+(window.usdperhash*miner.getTotalHashes()).toFixed(7));
     }
   },500)
 }
